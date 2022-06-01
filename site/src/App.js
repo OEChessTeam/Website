@@ -11,10 +11,12 @@ function App() {
     if(!token) {
         return <Login setToken={setToken} />
     }
+
+
   return (
+    <BrowserRouter>
       <div className="wrapper">
         <h1>Application</h1>
-        <BrowserRouter>
           <Routes>
             <Route path="/dashboard">
               <Dashboard />
@@ -23,8 +25,8 @@ function App() {
               <Preferences />
             </Route>
           </Routes>
-        </BrowserRouter>
-      </div>
+        </div>
+    </BrowserRouter>
   );
 }
 
